@@ -1,13 +1,20 @@
-from distutils.core import setup
-setup(
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
   name = 'UNATD',
-  packages = ['UNATD'], # this must be the same as the name above
-  version = '0.1',
-  description = 'paquete de aprendizaje de TDA - UNAL Colombia',
+  version = '0.0.3',
   author = 'Isaac Zainea',
-  author_email = 'isaaczainea@gmail.com',
+  author_email = 'isaaczainea@gmail.com',  
+  description = 'paquete de aprendizaje de TDA - UNAL Colombia',
   url = 'https://github.com/izainea/UNATD', # use the URL to the github repo
-  download_url = 'https://github.com/izainea/UNATD/tarball/0.1',
   keywords = ['testing', 'ATD', 'TDA'],
-  classifiers = [],
+  packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
 )
